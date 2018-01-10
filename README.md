@@ -16,6 +16,7 @@
 >>1.3service 整合    applicationContext-service.xml</br>
 >>1.4 事务管理   applicationContext-trans.xml</br>
 >>1.5配置web.xml</br>
+
 >三：引用dubbo发布服务
 
 

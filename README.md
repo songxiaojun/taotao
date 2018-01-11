@@ -17,6 +17,13 @@
 >>>1.4 事务管理   applicationContext-trans.xml</br>
 >>>1.5配置web.xml</br>
 
->三：引用dubbo发布服务
+>三：引用dubbo发布服务</br>
+>四：测试服务</br>
+>>4.1:taotao-parent   maven install</br>
+>>4.2:taotao-common  maven install</br>
+>>4.3:taotao-manager maven install</br>
+>>4.4:taotao-manager 发布tomcat</br>
+>>4.5:taotao-manager-web 发布tomcat</br>
+>五：
 
 

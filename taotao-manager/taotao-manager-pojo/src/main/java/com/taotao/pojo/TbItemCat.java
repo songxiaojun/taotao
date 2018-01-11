@@ -83,13 +83,4 @@ public class TbItemCat implements Serializable{
     public void setUpdated(Date updated) {
         this.updated = updated;
     }
-
-	@Override
-	public String toString() {
-		return "TbItemCat [id=" + id + ", parentId=" + parentId + ", name=" + name + ", status=" + status
-				+ ", sortOrder=" + sortOrder + ", isParent=" + isParent + ", created=" + created + ", updated="
-				+ updated + "]";
-	}
-    
-    
 }

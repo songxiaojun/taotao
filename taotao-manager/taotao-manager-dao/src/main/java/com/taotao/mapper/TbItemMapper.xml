@@ -26,6 +26,10 @@
     where id = #{id,jdbcType=BIGINT}
   </select>
   
-  
+  <select id="selectByExample" resultMap="BaseResultMap"  >
+    select 
+    <include refid="Base_Column_List" />
+    from tb_item
+  </select>
  
 </mapper>

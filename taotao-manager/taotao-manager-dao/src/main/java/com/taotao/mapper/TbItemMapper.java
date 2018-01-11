@@ -1,5 +1,7 @@
 package com.taotao.mapper;
 
+import java.util.List;
+
 import com.taotao.pojo.TbItem;
 
 public interface TbItemMapper {
@@ -14,5 +16,8 @@ public interface TbItemMapper {
 
 
     int updateByPrimaryKeySelective(TbItem record);
+
+
+	List<TbItem> selectByExample();
 
 }

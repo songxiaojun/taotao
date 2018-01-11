@@ -7,6 +7,8 @@ import org.csource.fastdfs.TrackerClient;
 import org.csource.fastdfs.TrackerServer;
 import org.junit.Test;
 
+import com.taotao.common.utils.FastDFSClient;
+
 /**
  * 测试fastdfs
  * @author jun
@@ -45,6 +47,12 @@ public class TestFastDfs {
 				for (String string : strings) {
 					System.out.println(string);
 				}
-
+				
+	}	
+				@Test
+				public void testFastDfsClient() throws Exception {
+					FastDFSClient fastDFSClient = new FastDFSClient("D:/git/taotao/taotao-manager-web/src/main/resources/resource/client.conf");
+					String file = fastDFSClient.uploadFile("D:/01.jpg");
+					System.out.println(file);
 	}
 }

@@ -11,7 +11,7 @@
 	http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.2.xsd">
 	
 	<!-- 配置包扫描器，扫描所有带@Service注解的类 -->
-	<context:component-scan base-package="com.taotao.search.service"/>
+	<context:component-scan base-package="com.taotao.search"/>
 	
 	<!-- 发布dubbo服务 -->
 	<!-- 提供方应用信息，用于计算依赖关系 -->
@@ -22,4 +22,5 @@
 	<dubbo:protocol name="dubbo" port="20882" />
 	<!-- 声明需要暴露的服务接口 -->
 	<dubbo:service interface="com.taotao.search.service.SearchItemService" ref="searchItemServiceImpl" timeout="300000"/>
+	<dubbo:service interface="com.taotao.search.service.SearchService" ref="searchServiceImpl" timeout="300000"/>
 </beans>

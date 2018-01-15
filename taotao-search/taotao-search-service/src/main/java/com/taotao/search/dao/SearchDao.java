@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.commons.lang3.StringUtils;
 import org.apache.solr.client.solrj.SolrQuery;
 import org.apache.solr.client.solrj.SolrServer;
 import org.apache.solr.client.solrj.response.QueryResponse;
@@ -18,9 +19,6 @@ import com.taotao.common.pojo.SearchResult;
 /**
  * 查询索引库商品dao
  * <p>Title: SearchDao</p>
- * <p>Description: </p>
- * <p>Company: www.itcast.cn</p> 
- * @version 1.0
  */
 @Repository
 public class SearchDao {
@@ -43,7 +41,12 @@ public class SearchDao {
 			SearchItem item = new SearchItem();
 			item.setCategory_name((String) solrDocument.get("item_category_name"));
 			item.setId((String) solrDocument.get("id"));
-			item.setImage((String) solrDocument.get("item_image"));
+			//取一张图片
+			String image = (String) solrDocument.get("item_image");
+			if (StringUtils.isNotBlank(image)) {
+				image = image.split(",")[0];
+			}
+			item.setImage(image);
 			item.setPrice((long) solrDocument.get("item_price"));
 			item.setSell_point((String) solrDocument.get("item_sell_point"));
 			//取高亮显示

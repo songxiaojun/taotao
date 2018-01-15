@@ -49,7 +49,7 @@ public class TestSolrJ {
 	@Test
 	public void deleteDocumentByQuery() throws Exception {
 		SolrServer solrServer = new HttpSolrServer("http://139.196.102.55:8080/solr/collection1/");
-		solrServer.deleteByQuery("item_title:测试商品3");
+		solrServer.deleteByQuery("item_title:测试商品");
 		solrServer.commit();
 	}
 	

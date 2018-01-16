@@ -1,4 +1,7 @@
 ># 淘淘商城学习源码
+>运行项目的流程 
+>>1.安装顺序install taotao-parent    taotao-common </br>  taotao-manage    taotao-content    taotao-search</br>
+>>2.安装顺序run   taotao-manage  taotao-content taotao-search </br>  taotao-manage-web   taotao-portal-web   taotao-search-web</br>
 >一：框架的搭建
 >>1.taotao-parent 父工程 打包方式为pom  管理jar包的版本号
 >>>2.taotao-common 工程  打包方式为jar   通用的工具类</br>

@@ -73,12 +73,4 @@ public class TbUser implements Serializable{
     public void setUpdated(Date updated) {
         this.updated = updated;
     }
-
-	@Override
-	public String toString() {
-		return "TbUser [id=" + id + ", username=" + username + ", password=" + password + ", phone=" + phone
-				+ ", email=" + email + ", created=" + created + ", updated=" + updated + "]";
-	}
-    
-    
 }

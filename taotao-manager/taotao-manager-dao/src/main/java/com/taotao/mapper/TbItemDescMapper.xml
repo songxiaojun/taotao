@@ -8,7 +8,12 @@
     <result column="item_desc" property="itemDesc" jdbcType="LONGVARCHAR" />
   </resultMap>
   
-  
+   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    *
+    from tb_item_desc
+    where item_id = #{itemId,jdbcType=BIGINT}
+  </select>
    <insert id="insertSelective" parameterType="com.taotao.pojo.TbItemDesc" >
     insert into tb_item_desc
     <trim prefix="(" suffix=")" suffixOverrides="," >
